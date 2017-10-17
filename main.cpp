@@ -6,7 +6,7 @@
 
 using namespace std;
 int target[2][4];
-bool visited[8][8][8][8][8][8][8][8];
+bool visited[8][8][8][8][8][8][8];
 
 struct config{
     int body[2][4], step;
@@ -15,12 +15,12 @@ struct config{
 
 bool checkv(config a)
 {
-    return !visited[a.body[0][0]-1][a.body[0][1]-1][a.body[0][2]-1][a.body[0][3]-1][a.body[1][0]-1][a.body[1][1]-1][a.body[1][2]-1][a.body[1][3]-1];
+    return !visited[a.body[0][0]-1][a.body[0][1]-1][a.body[0][2]-1][a.body[0][3]-1][a.body[1][0]-1][a.body[1][1]-1][a.body[1][2]-1];
 }
 
 void markv(config a)
 {
-    visited[a.body[0][0]-1][a.body[0][1]-1][a.body[0][2]-1][a.body[0][3]-1][a.body[1][0]-1][a.body[1][1]-1][a.body[1][2]-1][a.body[1][3]-1]=true;
+    visited[a.body[0][0]-1][a.body[0][1]-1][a.body[0][2]-1][a.body[0][3]-1][a.body[1][0]-1][a.body[1][1]-1][a.body[1][2]-1]=true;
 }
 
 config coma(config a)
